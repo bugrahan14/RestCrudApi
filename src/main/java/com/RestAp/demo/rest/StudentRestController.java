@@ -46,7 +46,7 @@ public class StudentRestController {
     }
 
 
-    @ExceptionHandler
+   /* @ExceptionHandler           ((( ---------------->>>>>>>CONTROLLER ADVİCE
     public ResponseEntity<StudentErrorResponse> handleException(Exception exc){
 
         // CREATE A StudentErrorResponse
@@ -61,4 +61,17 @@ public class StudentRestController {
 
     }
 
+    @ExceptionHandler
+    public ResponseEntity<StudentErrorResponse> handlexception(Exception exc) {
+
+        // create a StudentErrorResponse
+        StudentErrorResponse error = new StudentErrorResponse();
+
+        error.setStatus(HttpStatus.BAD_REQUEST.value());
+        error.setMessage(exc.getMessage());
+        error.setTimeStamp(System.currentTimeMillis());
+
+        // return ResponseEntity
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }*/
 }
