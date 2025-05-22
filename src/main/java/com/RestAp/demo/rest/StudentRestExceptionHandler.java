@@ -11,7 +11,7 @@ public class StudentRestExceptionHandler {
 
     // ADD EXCEPTİON HANDLİNG CODE HERE
     @ExceptionHandler
-    public ResponseEntity<StudentErrorResponse> handleException(Exception exc){
+    public ResponseEntity<StudentErrorResponse> handleException(StudentNotFoundException exc){
 
         // CREATE A StudentErrorResponse
         StudentErrorResponse error = new StudentErrorResponse();
